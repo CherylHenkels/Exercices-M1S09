@@ -13,6 +13,7 @@ public class LivroEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false)
     private String titulo;
     private String autor;
     private Long anoPublicacao;
