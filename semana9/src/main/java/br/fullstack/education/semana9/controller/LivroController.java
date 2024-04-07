@@ -28,4 +28,10 @@ public class LivroController {
         return livroService.listaLivros();
     }
 
+    //Exercicio 5 - DELETE
+    @DeleteMapping
+    public String deletarLivro(@RequestParam("id") Long id){
+        return "Deletado com sucesso!";
+    }
+
 }

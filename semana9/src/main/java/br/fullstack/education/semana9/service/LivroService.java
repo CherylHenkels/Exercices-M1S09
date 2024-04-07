@@ -21,4 +21,8 @@ public class LivroService {
     public LivroEntity salvaLivro(LivroEntity livroEntity) {
         return livroRepository.save(livroEntity);
     }
+
+    public void deletarLivro(Long id) {
+        livroRepository.deleteById(id);
+    }
 }
