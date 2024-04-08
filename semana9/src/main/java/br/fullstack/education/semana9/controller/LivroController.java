@@ -34,6 +34,10 @@ public class LivroController {
         return "Deletado com sucesso!";
     }
 
-
+    //Exercicio 7 - UPDATE
+    @PutMapping
+    public LivroEntity atualizarLivro(@RequestBody LivroEntity livroEntity){
+        return livroService.atualizaLivro(livroEntity);
+    }
 
 }

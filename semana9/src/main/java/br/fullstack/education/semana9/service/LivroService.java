@@ -26,5 +26,11 @@ public class LivroService {
         livroRepository.deleteById(id);
     }
 
-
+    public LivroEntity atualizaLivro(LivroEntity livroEntity) {
+         livroRepository.update(livroEntity.getId(),
+                livroEntity.getTitulo(),
+                livroEntity.getAutor(),
+                livroEntity.getAnoPublicacao());
+        return livroRepository.save(livroEntity);
+    }
 }
