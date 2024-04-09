@@ -33,4 +33,16 @@ public class LivroService {
                 livroEntity.getAnoPublicacao());
         return livroRepository.save(livroEntity);
     }
+
+    public LivroEntity buscarPorId(Long id) throws Exception {
+        List<LivroEntity> livros = livroRepository.findAll();
+        for (LivroEntity livro : livros) {
+            if (livro.getId().equals(id)) {
+                return livro;
+            }
+        }
+        throw new Exception("Livro não encontrado");
+    }
+
+
 }
